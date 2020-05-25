@@ -1,0 +1,43 @@
+Number of text lines
+Text line #1
+Text line #2 etc.
+Number of inventory items
+Inventory items
+Number of choices
+Choice name #1
+Is choice a door (1) or block (0) #1
+Choice ID #1
+Choice inventory requirement #1
+Is choice inventory requirement shown? (True / False) #1
+Choice select text #1 etc.
+Does choice kill you? (True / False) #1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
