@@ -21,8 +21,12 @@ Choice inventory requirement #1
 Is choice inventory requirement shown? #1
 Choice select text #1 etc.
 Does door kill you? #1
+Is there an enemy?
+Extras
 """
 import sys
+import random
+random.seed()
 def is_number(s):
     try:
         float(s)
@@ -31,10 +35,88 @@ def is_number(s):
         return False
 def eq(cmd, s):
     return(cmd.lower() == s.lower())
+enemyName = ""
+enemyAttack = 20
+enemyHealth = 50
+enemyAccuracy = 6
+playerAttack = 10
+playerHealth = 60
+playerAccuracy = 7
+def loadEnemy(fileID):
+    try:
+        with open(fileID + ".txt") as f:
+            for i in range(int(f.readline()[:-1])):
+                f.readline()
+            for i in range(int(f.readline())):
+                f.readline()
+            for i in range(int(f.readline()) * 7):
+                f.readline()
+            f.readline()
+            enemyName = f.readline()[:-1]
+            print("Enemy found: " + enemyName)
+            enemyAttack = int(f.readline())
+            enemyHealth = int(f.readline())
+            enemyAccuracy = int(f.readline())
+            playerAttack = 10
+            playerHealth = 60
+            playerAccuracy = 7
+            while enemyHealth > 0:
+                playerHealth -= attackPlayer()
+                if(playerHealth <= 0):
+                    return(0)
+                enemyHealth -= attackEnemy()
+                if(enemyHealth <= 0):
+                    print("You defeated the " + enemyName + "!")
+                    return(1)
+                print("Your health:  ", end="")
+                if(playerHealth > 20):
+                    for i in range(playerHealth):
+                        print("█", end="")
+                else:
+                    for i in range(playerHealth):
+                        sys.stderr.write("█")
+                print()
+                print("Enemy health: ", end="")
+                if(enemyHealth > 20):
+                    for i in range(enemyHealth):
+                        print("█", end="")
+                else:
+                    for i in range(enemyHealth):
+                        sys.stderr.write("█")
+                print()
+                if(input("Continue? (Y/N)\n>>> ").lower() == "n"):
+                    return(2)
+            
+    except OSError:
+        print("File does not exist")
+        return(1)
 
-fileID = "1"
+def attackPlayer():
+    result = random.randrange(10)
+    if(result <= enemyAccuracy):
+        effect = random.randrange(max(enemyAttack - 20, 4), max(enemyAttack, 6))
+        result = random.randrange(10)
+        sys.stderr.write("It attacks and does " + str(effect) + " damage\n")
+        return(effect)
+    else:
+        print("It attacks, but misses")
+        return(0)
+
+def attackEnemy():
+    result = random.randrange(10)
+    if(result <= playerAccuracy):
+        effect = random.randrange(max(playerAttack - 20, 4), max(playerAttack, 6))
+        result = random.randrange(10)
+        sys.stderr.write("You attack and do " + str(effect) + " damage\n")
+        return(effect)
+    else:
+        print("You attack, but miss")
+        return(0)
+    
+fileID = "00intro"
 inventory = []
 cont = True
+lastID = "00intro"
 while cont:
     choices = []
     choiceIsDoor = []
@@ -63,10 +145,22 @@ while cont:
                 choiceSel.append(f.readline()[:-1])
                 choiceDie.append(f.readline()[:-1])
             print()
-            print("Enter command")
             isNextDoor = False
             nextDoor = -1
+            if(f.readline()[:-1] == "True"):
+                attackResult = loadEnemy(fileID)
+                if(attackResult == 0):
+                    sys.stderr.write("You died.\n")
+                    input("Press enter to continue...\n")
+                    sys.stderr.write("PRESS CANCEL IF IN PYSHELL\n")
+                    exit("User died")
+                    cont = False
+                if(attackResult == 2):
+                    isNextDoor = True
+                    nextDoor = lastID
+                    lastID = fileID
             while not isNextDoor:
+                print("Enter command")
                 command = input(">>> ")
                 try:
                     firstCmdIndex = command.index(' ') #Get first word
@@ -93,13 +187,15 @@ while cont:
                                     sys.stderr.write("PRESS CANCEL IF IN PYSHELL\n")
                                     exit("User died")
                                     cont = False
-                                if(choiceIsDoor[moveChoice]): #If its a door open it
-                                    nextDoor = choiceIDs[moveChoice]
-                                    isNextDoor = True
-                                    print(choiceSel[moveChoice])
-                                    input("Press enter to continue...\n")
                                 else:
-                                    print(choiceSel[moveChoice]) #Otherwise just print the text
+                                    if(choiceIsDoor[moveChoice]): #If its a door open it
+                                        nextDoor = choiceIDs[moveChoice]
+                                        isNextDoor = True
+                                        print(choiceSel[moveChoice])
+                                        input("Press enter to continue...\n")
+                                        lastID = fileID
+                                    else:
+                                        print(choiceSel[moveChoice]) #Otherwise just print the text
                             else:
                                 if(choiceReqShown[moveChoice] == "True"):
                                     sys.stderr.write("You need an item to do this: " + choiceReq[moveChoice] + "\n")
@@ -109,11 +205,11 @@ while cont:
                             sys.stderr.write("The location \"" + secondCmd + "\" doesn't exist!\n")
                     else:
                         sys.stderr.write("You need to choose somewhere to move to!\n")
-                        
+                
             
-            
-            fileID = choiceIDs[moveChoice]
+            fileID = nextDoor
     except Exception as e:
+        print()
         sys.stderr.write("An error has ocurred.\n")
         print("")
         print("Please contact the game maker with the place ID.")

@@ -20,8 +20,8 @@ Door
 3
 
 
-False
 You took the grey entrance
+False
 Black door
 Block
 

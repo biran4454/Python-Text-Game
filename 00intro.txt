@@ -1,0 +1,87 @@
+44
+Welcome to the adventure game.
+Created by Biran4454
+Use "input" to enter commands.
+Use "inventory" to see your inventory.
+Use "quit" or "exit" to exit the game.
+
+*****************************************
+You stare at the tall cliff face in front of you,
+worn by thousands of years of wind and rain - an
+ancient giant, frozen forever.
+Its rough, sharp edges glint in the misty sunlight,
+like daggers at the heavens.
+
+This is the moment you've been waiting for.
+All those years of training, all the time
+you spend learning about the impossible
+have lead you to here.
+
+The adrenaline grips you.
+
+Overhead, crows circle the summit, searching and
+scavenging whatever they can see.
+A heavy drizzle sets in; the wind starts to howl.
+You can feel it bite at you, even through your
+fur coat.
+
+Beneath your feet, the ground is frozen and bare,
+only broken by hard mountain grass, stiff from the
+cold.
+
+You notice a small stream winding through the valley.
+It could lead to another entrance to the cliff.
+
+You are wearing a pair of leather boots, a fur coat,
+and a pair of thich walking trousers.
+Your rucksack is beginning to get wet, and you are
+beginning to get cold.
+
+You see a small dark cave in the cliff. You know
+that beyond that point, anything could happen.
+Beyond that point there will be no help.
+You will be on your own.
+
+Do you ENTER THE CAVE or WALK TO THE STREAM?
+1
+Torch
+2
+Enter the cave
+1
+2
+
+
+You enter the cold, dark cave.
+False
+Walk to the stream
+0
+
+
+
+This area has not been created yet :) Please check back later!
+False
+True
+Dragon
+20
+50
+7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

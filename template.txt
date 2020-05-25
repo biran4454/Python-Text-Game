@@ -11,9 +11,11 @@ Choice inventory requirement #1
 Is choice inventory requirement shown? (True / False) #1
 Choice select text #1 etc.
 Does choice kill you? (True / False) #1
-
-
-
+Is there an enemy? (True / False)
+Enemy name
+Enemy Attack
+Enemy Health
+Enemy Accuracy
 
 
 
