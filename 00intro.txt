@@ -1,11 +1,11 @@
-47
-Welcome to the adventure game.
-Created by Biran4454
-Use "input" to enter commands.
-Use "inventory" to see your inventory.
-Use "quit" or "exit" to exit the game.
+48
++Welcome to the adventure game.
++Created by Biran4454
++Use "input" to enter commands.
++Use "inventory" to see your inventory.
++Use "quit" or "exit" to exit the game.
 
-*****************************************
++*****************************************
 You stare at the tall cliff face in front of you,
 worn by thousands of years of wind and rain - an
 ancient giant, frozen forever.

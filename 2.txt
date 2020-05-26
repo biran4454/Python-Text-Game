@@ -1,4 +1,4 @@
-28
+33
 You walk through the cold, damp cave. Gravel crunches under
 your feet; the sound echoes off the dull walls.
 
@@ -11,6 +11,8 @@ all huddled together. You stare at them for so long you
 forget to watch where you are going, and nearly trip over
 a large rock.
 
++break
+
 Carefully making your way over the uneaven floor, you wonder
 how this cave was formed.
 Was it from an underground river, or was it made by
@@ -21,13 +23,15 @@ a small flashlight.
 Reaching into your rucksack to get it, you can't shake the
 feeling that you're being watched.
 
++break
+
 The torch lights up the entire cave - although there
 isn't much to look at, other than rocks and spiders!
 Making your way past a large bolder, you hear a sound.
 
 Something is there, under the rock.
 
-Do you RUN away or INVESTIGATE?
++Do you RUN away or INVESTIGATE?
 0
 2
 Run

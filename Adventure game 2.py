@@ -130,14 +130,14 @@ while cont:
             print("-- ID: " + fileID + " --\n") #Print location ID
             
             for i in range(int(f.readline()[:-1])): #Print story background
-                line = f.readline()[:-1]
-                if line == "+break":
+                line = f.readline()
+                if line[:-1] == "+break":
                     input("Press enter to continue... ")
                 else:
-                    if len(line) > 0 and line[0] == "+":
+                    if len(line[:-1]) > 0 and line[0] == "+":
                         sys.stderr.write(line[1:])
                     else:
-                        print(line)
+                        print(line[:-1])
             
             for i in range(int(f.readline())): #Add items to inventory
                 inventory.append(f.readline()[:-1])
