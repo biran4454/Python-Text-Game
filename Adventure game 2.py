@@ -40,27 +40,27 @@ def is_number(s):
         return False
 def eq(cmd, s):
     return(cmd.lower() == s.lower())
-def rprint(text):
+def rprint(text): #Print through stderr. Pros: makes red text! Yay!
     sys.stderr.write(text)
 
 enemyName = ""
 enemyAttack = 20
 enemyHealth = 50
 enemyAccuracy = 6
-playerAttack = 10
+playerAttack = 10 #Default settings
 playerHealth = 60
 playerAccuracy = 7
-def loadEnemy(fileID):
+def loadEnemy(fileID): #Returns 0 if player dead, 1 if alive, 2 if running
     try:
         with open(fileID + ".txt") as f:
-            for i in range(int(f.readline()[:-1])):
+            for i in range(int(f.readline()[:-1])): #Skip the first lines
                 f.readline()
             for i in range(int(f.readline())):
                 f.readline()
             for i in range(int(f.readline()) * 8):
                 f.readline()
             f.readline()
-            enemyName = f.readline()[:-1]
+            enemyName = f.readline()[:-1] #Set enemy stats
             print("Enemy found: " + enemyName)
             enemyAttack = int(f.readline())
             enemyHealth = int(f.readline())
@@ -68,18 +68,18 @@ def loadEnemy(fileID):
             playerAttack = 10
             playerHealth = 60
             playerAccuracy = 7
-            while enemyHealth > 0:
+            while enemyHealth > 0: #Param not really necessary
                 playerHealth -= attackPlayer()
-                if(playerHealth <= 0):
+                if(playerHealth <= 0): #If dead
                     return(0)
                 enemyHealth -= attackEnemy()
                 if(enemyHealth <= 0):
                     print("You defeated the " + enemyName + "!")
                     return(1)
                 print("Your health:  ", end="")
-                if(playerHealth > 20):
+                if(playerHealth > 20): #TODO: greater than percentage of start health
                     for i in range(playerHealth):
-                        print("▅", end="")
+                        print("▅", end="") #Print health bar
                 else:
                     for i in range(playerHealth):
                         rprint("▅")
@@ -101,11 +101,11 @@ def loadEnemy(fileID):
                 
                 if(firstCmd == "escape"):
                     return(2)
-                if(firstCmd == "medi"):
+                if(firstCmd == "medi"): #Health pack
                     if(inventory.count("medipack") > 0 or inventory.count("Medipack") > 0):
                         playerHealth += 20
                         playerHealth = min(playerHealth, 60)
-                if(firstCmd == "use"):
+                if(firstCmd == "use"): #Extra attack
                     if(firstCmdIndex != -1):
                         secondCmdIndex = len(attackCmd)
                         secondCmd = attackCmd[firstCmdIndex + 1:secondCmdIndex].lower()
@@ -124,9 +124,9 @@ def loadEnemy(fileID):
         return(1)
 
 def attackPlayer():
-    result = random.randrange(10)
+    result = random.randrange(10) #Used for hit / miss calc
     if(result <= enemyAccuracy):
-        effect = random.randrange(max(enemyAttack - 20, 4), max(enemyAttack, 6))
+        effect = random.randrange(max(enemyAttack - 20, 4), max(enemyAttack, 6)) #No negative damage!
         result = random.randrange(10)
         rprint("It attacks and does " + str(effect) + " damage\n")
         return(effect)
@@ -188,9 +188,9 @@ while cont:
             print()
             isNextDoor = False
             nextDoor = -1
-            if(f.readline()[:-1] == "True"):
-                attackResult = loadEnemy(fileID)
-                if(attackResult == 0):
+            if(f.readline()[:-1] == "True"): #If there's an enemy
+                attackResult = loadEnemy(fileID) #Run attack sequence
+                if(attackResult == 0): #And process the result
                     rprint("You died.\n")
                     input("Press enter to continue...\n")
                     rprint("PRESS CANCEL IF IN PYSHELL\n")
@@ -227,8 +227,8 @@ while cont:
                         secondCmd = command[firstCmdIndex + 1:secondCmdIndex].lower()
                         try:
                             moveChoice = choices.index(secondCmd)
-                            if(choiceReq[moveChoice] == "" or inventory.count(choiceReq[moveChoice]) > 0):
-                                if(choiceDie[moveChoice] == "True"):
+                            if(choiceReq[moveChoice] == "" or inventory.count(choiceReq[moveChoice]) > 0): #If you have the right items
+                                if(choiceDie[moveChoice] == "True"): #If the choice kills you
                                     print(choiceSel[moveChoice])
                                     rprint("You died.\n")
                                     input("Press enter to continue...\n")
