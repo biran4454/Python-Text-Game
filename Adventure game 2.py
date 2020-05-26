@@ -79,18 +79,18 @@ def loadEnemy(fileID):
                 print("Your health:  ", end="")
                 if(playerHealth > 20):
                     for i in range(playerHealth):
-                        print("█", end="")
+                        print("▅", end="")
                 else:
                     for i in range(playerHealth):
-                        rprint("█")
+                        rprint("▅")
                 print()
                 print("Enemy health: ", end="")
                 if(enemyHealth > 20):
                     for i in range(enemyHealth):
-                        print("█", end="")
+                        print("▅", end="")
                 else:
                     for i in range(enemyHealth):
-                        rprint("█")
+                        rprint("▅")
                 print()
                 if(input("Continue? (Press Y/N)\n>>> ").lower() == "n"):
                     return(2)
