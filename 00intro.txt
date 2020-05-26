@@ -60,11 +60,6 @@ Walk to the stream
 
 This area has not been created yet :) Please check back later!
 False
-True
-Dragon
-20
-50
-7
 
 
 

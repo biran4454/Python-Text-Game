@@ -138,7 +138,7 @@ while cont:
             choiceLen = int(f.readline()[:-1])
             for i in range(choiceLen): #Populate possible choices
                 choices.append(f.readline()[:-1].lower())
-                choiceIsDoor.append(f.readline()[:-1] == "1")
+                choiceIsDoor.append(f.readline()[:-1] == "Door")
                 choiceIDs.append(f.readline()[:-1])
                 choiceReq.append(f.readline()[:-1])
                 choiceReqShown.append(f.readline()[:-1])
@@ -159,7 +159,7 @@ while cont:
                     isNextDoor = True
                     nextDoor = lastID
                     lastID = fileID
-            while (not isNextDoor):
+            while not isNextDoor:
                 print("Enter command")
                 command = input(">>> ")
                 try:

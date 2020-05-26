@@ -1,0 +1,46 @@
+4
+Under the rock you can see a pair of eyes staring
+back at you.
+Suddenly, a snake jumps out at you!
+If you win, you must RUN away.
+0
+1
+Run
+0
+
+
+
+I haven't finished this yet!
+False
+True
+Snake
+7
+20
+4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
