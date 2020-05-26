@@ -33,13 +33,13 @@ Something is there, under the rock.
 
 +Do you RUN away or INVESTIGATE?
 0
-2
+3
 Run
-0
+1
+4
 
 
-
-I haven't finished this yet!
+You run away from the rock.
 False
 
 INVESTIGATE
@@ -50,6 +50,14 @@ INVESTIGATE
 You crouch down to see what was making the noise.
 False
 
+Pick up rocks
+0
+
+
+
+You pick up some rocks off the cave floor.
+False
+rocks
 False
 
 

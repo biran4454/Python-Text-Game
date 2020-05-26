@@ -92,11 +92,32 @@ def loadEnemy(fileID):
                     for i in range(enemyHealth):
                         rprint("▅")
                 print()
-                if(input("Continue? (Press Y/N)\n>>> ").lower() == "n"):
+                attackCmd = input("Command? (Escape, Continue, Medi, Use)\n>>> ").lower()
+                try:
+                    firstCmdIndex = attackCmd.index(' ') #Get first word
+                except ValueError:
+                    firstCmdIndex = len(attackCmd)
+                firstCmd = attackCmd[:firstCmdIndex].lower()
+                
+                if(firstCmd == "escape"):
                     return(2)
+                if(firstCmd == "medi"):
+                    if(inventory.count("medipack") > 0 or inventory.count("Medipack") > 0):
+                        playerHealth += 20
+                        playerHealth = min(playerHealth, 60)
+                if(firstCmd == "use"):
+                    if(firstCmdIndex != -1):
+                        secondCmdIndex = len(attackCmd)
+                        secondCmd = attackCmd[firstCmdIndex + 1:secondCmdIndex].lower()
+                        if(eq(secondCmd, "rocks")):
+                            attackEnemy()
+                        else:
+                            rprint("You can't use " + secondCmd + ". \n")
+                    else:
+                        rprint("Nothing selected to use. Continuing.\n")
             
     except OSError:
-        print("File does not exist")
+        rprint("File does not exist. Please contact the program maker.\n")
         return(1)
 
 def attackPlayer():
@@ -254,6 +275,24 @@ while cont:
         print("Likely error cause: Initial description line length incorrect")
         input("Press enter to continue\n")
         cont = False
+    
+    except FileNotFoundError as e:
+        print()
+        rprint("An error has ocurred.\n")
+        print()
+        print("Please contact the game maker with the following information.")
+        print("Please include a short report with what you did.")
+        print()
+        print("Place ID: " + fileID)
+        print("Last ID: " + lastID)
+        print()
+        print("Error details:")
+        rprint(str(e) + "\n")
+        print()
+        print("Likely error cause: File missing, file name incorrect, or invalid file reference.")
+        input("Press enter to continue\n")
+        cont = False
+    
     except Exception as e:
         print()
         rprint("An error has ocurred.\n")

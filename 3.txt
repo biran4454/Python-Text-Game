@@ -6,13 +6,13 @@ Suddenly, a snake jumps out at you!
 0
 1
 Run
-0
+1
+4
 
 
-
-I haven't finished this yet!
+You run away from the rock.
 False
-item!
+
 True
 Snake
 8
