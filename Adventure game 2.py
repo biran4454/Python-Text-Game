@@ -92,7 +92,7 @@ def loadEnemy(fileID):
                     for i in range(enemyHealth):
                         rprint("▅")
                 print()
-                attackCmd = input("Command? (Escape, Continue, Medi, Use)\n>>> ").lower()
+                attackCmd = input("Command? (Escape, Medi, Use, [enter])\n>>> ").lower()
                 try:
                     firstCmdIndex = attackCmd.index(' ') #Get first word
                 except ValueError:
