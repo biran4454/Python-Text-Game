@@ -14,9 +14,9 @@ I haven't finished this yet!
 False
 True
 Snake
+30
+60
 7
-20
-4
 
 
 

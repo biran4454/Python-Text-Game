@@ -1,4 +1,4 @@
-44
+47
 Welcome to the adventure game.
 Created by Biran4454
 Use "input" to enter commands.
@@ -14,10 +14,12 @@ like daggers at the heavens.
 
 This is the moment you've been waiting for.
 All those years of training, all the time
-you spend learning about the impossible
+you spent learning about the impossible
 have lead you to here.
 
 The adrenaline grips you.
+
++break
 
 Overhead, crows circle the summit, searching and
 scavenging whatever they can see.
@@ -28,6 +30,8 @@ fur coat.
 Beneath your feet, the ground is frozen and bare,
 only broken by hard mountain grass, stiff from the
 cold.
+
++break
 
 You notice a small stream winding through the valley.
 It could lead to another entrance to the cliff.
@@ -42,9 +46,12 @@ that beyond that point, anything could happen.
 Beyond that point there will be no help.
 You will be on your own.
 
-Do you ENTER THE CAVE or WALK TO THE STREAM?
-1
++Do you ENTER THE CAVE or WALK TO THE STREAM?
+4
 Torch
+Dagger
+Apple
+Water bottle
 2
 Enter the cave
 1

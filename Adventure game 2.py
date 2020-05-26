@@ -130,7 +130,14 @@ while cont:
             print("-- ID: " + fileID + " --\n") #Print location ID
             
             for i in range(int(f.readline()[:-1])): #Print story background
-                print(f.readline()[:-1])
+                line = f.readline()[:-1]
+                if line == "+break":
+                    input("Press enter to continue... ")
+                else:
+                    if len(line) > 0 and line[0] == "+":
+                        sys.stderr.write(line[1:])
+                    else:
+                        print(line)
             
             for i in range(int(f.readline())): #Add items to inventory
                 inventory.append(f.readline()[:-1])
@@ -208,10 +215,26 @@ while cont:
                 
             
             fileID = nextDoor
+    except ValueError as e:
+        print()
+        sys.stderr.write("An error has ocurred.\n")
+        print()
+        print("Please contact the game maker with the following information.")
+        print("Please include a short report with what you did.")
+        print()
+        print("Place ID: " + fileID)
+        print("Last ID: " + lastID)
+        print()
+        print("Error details:")
+        sys.stderr.write(str(e) + "\n")
+        print()
+        print("Likely error cause: Initial description line length incorrect")
+        input("Press enter to continue\n")
+        cont = False
     except Exception as e:
         print()
         sys.stderr.write("An error has ocurred.\n")
-        print("")
+        print()
         print("Please contact the game maker with the place ID.")
         print("Please include a short report with what you did.")
         print("Error details:")
