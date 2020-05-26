@@ -41,6 +41,7 @@ Run
 
 I haven't finished this yet!
 False
+
 INVESTIGATE
 1
 3
@@ -48,6 +49,7 @@ INVESTIGATE
 
 You crouch down to see what was making the noise.
 False
+
 False
 
 

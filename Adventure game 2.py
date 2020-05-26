@@ -19,13 +19,15 @@ Is choice a door ("Door") or command? #1
 Choice ID #1
 Choice inventory requirement #1
 Is choice inventory requirement shown? #1
-Choice select text #1 etc.
+Choice select text #1
 Does door kill you? #1
+Door item drop #1
 Is there an enemy?
 Enemy name
 Enemy attack
 Enemy health
 Enemy accuracy
+Enemy item drops
 """
 import sys
 import random
@@ -55,7 +57,7 @@ def loadEnemy(fileID):
                 f.readline()
             for i in range(int(f.readline())):
                 f.readline()
-            for i in range(int(f.readline()) * 7):
+            for i in range(int(f.readline()) * 8):
                 f.readline()
             f.readline()
             enemyName = f.readline()[:-1]
@@ -131,6 +133,7 @@ while cont:
     choiceReqShown = []
     choiceSel = []
     choiceDie = []
+    choiceInvAdd = []
     try:
         with open(fileID + ".txt") as f:
             print("-- ID: " + fileID + " --\n") #Print location ID
@@ -157,6 +160,7 @@ while cont:
                 choiceReqShown.append(f.readline()[:-1])
                 choiceSel.append(f.readline()[:-1])
                 choiceDie.append(f.readline()[:-1])
+                choiceInvAdd.append(f.readline()[:-1])
             print()
             isNextDoor = False
             nextDoor = -1
@@ -173,6 +177,8 @@ while cont:
                     nextDoor = lastID
                     lastID = fileID
                 else:
+                    for i in range(4):
+                        f.readline()[:-1]
                     drop = f.readline()[:-1]
                     if drop != "":
                         rprint("+ " + drop + "\n")
@@ -210,10 +216,16 @@ while cont:
                                         nextDoor = choiceIDs[moveChoice]
                                         isNextDoor = True
                                         print(choiceSel[moveChoice])
+                                        if(choiceInvAdd[moveChoice] != ""):
+                                            rprint("+ " + choiceInvAdd[moveChoice] + "\n")
+                                            inventory.append(choiceInvAdd[moveChoice])
                                         input("Press enter to continue...\n")
                                         lastID = fileID
                                     else:
                                         print(choiceSel[moveChoice]) #Otherwise just print the text
+                                        if(choiceInvAdd[moveChoice] != ""):
+                                            rprint("+ " + choiceInvAdd[moveChoice] + "\n")
+                                            inventory.append(choiceInvAdd[moveChoice])
                             else:
                                 if(choiceReqShown[moveChoice] == "True"):
                                     rprint("You need an item to do this: " + choiceReq[moveChoice] + "\n")

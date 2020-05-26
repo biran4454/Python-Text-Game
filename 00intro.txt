@@ -47,9 +47,8 @@ Beyond that point there will be no help.
 You will be on your own.
 
 +Do you ENTER THE CAVE or WALK TO THE STREAM?
-4
+3
 Torch
-Dagger
 Apple
 Water bottle
 2
@@ -60,12 +59,15 @@ Enter the cave
 
 You enter the cold, dark cave.
 False
+
 Walk to the stream
 0
 
 
 
 This area has not been created yet :) Please check back later!
+False
+
 False
 
 

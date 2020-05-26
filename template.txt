@@ -9,8 +9,9 @@ Is choice a door (1) or block (0) #1
 Choice ID #1
 Choice inventory requirement #1
 Is choice inventory requirement shown? (True / False) #1
-Choice select text #1 etc.
+Choice select text #1
 Does choice kill you? (True / False) #1
+Door item drop #1
 Is there an enemy? (True / False)
 Enemy name
 Enemy Attack
