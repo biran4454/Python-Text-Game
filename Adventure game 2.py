@@ -22,7 +22,10 @@ Is choice inventory requirement shown? #1
 Choice select text #1 etc.
 Does door kill you? #1
 Is there an enemy?
-Extras
+Enemy name
+Enemy attack
+Enemy health
+Enemy accuracy
 """
 import sys
 import random
