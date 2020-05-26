@@ -87,7 +87,7 @@ def loadEnemy(fileID):
                     for i in range(enemyHealth):
                         sys.stderr.write("█")
                 print()
-                if(input("Continue? (Y/N)\n>>> ").lower() == "n"):
+                if(input("Continue? (Press Y/N)\n>>> ").lower() == "n"):
                     return(2)
             
     except OSError:
