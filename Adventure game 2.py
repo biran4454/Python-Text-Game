@@ -110,7 +110,10 @@ def loadEnemy(fileID):
                         secondCmdIndex = len(attackCmd)
                         secondCmd = attackCmd[firstCmdIndex + 1:secondCmdIndex].lower()
                         if(eq(secondCmd, "rocks")):
-                            attackEnemy()
+                            if(inventory.count("rocks") > 0):
+                                attackEnemy()
+                            else:
+                                rprint("You don't have " + secondCmd + ". \n")
                         else:
                             rprint("You can't use " + secondCmd + ". \n")
                     else:
