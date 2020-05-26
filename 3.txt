@@ -14,10 +14,10 @@ I haven't finished this yet!
 False
 True
 Snake
-30
-60
-7
-
+8
+15
+4
+Snake skin
 
 
 

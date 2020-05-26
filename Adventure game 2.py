@@ -38,6 +38,9 @@ def is_number(s):
         return False
 def eq(cmd, s):
     return(cmd.lower() == s.lower())
+def rprint(text):
+    sys.stderr.write(text)
+
 enemyName = ""
 enemyAttack = 20
 enemyHealth = 50
@@ -77,7 +80,7 @@ def loadEnemy(fileID):
                         print("█", end="")
                 else:
                     for i in range(playerHealth):
-                        sys.stderr.write("█")
+                        rprint("█")
                 print()
                 print("Enemy health: ", end="")
                 if(enemyHealth > 20):
@@ -85,7 +88,7 @@ def loadEnemy(fileID):
                         print("█", end="")
                 else:
                     for i in range(enemyHealth):
-                        sys.stderr.write("█")
+                        rprint("█")
                 print()
                 if(input("Continue? (Press Y/N)\n>>> ").lower() == "n"):
                     return(2)
@@ -99,7 +102,7 @@ def attackPlayer():
     if(result <= enemyAccuracy):
         effect = random.randrange(max(enemyAttack - 20, 4), max(enemyAttack, 6))
         result = random.randrange(10)
-        sys.stderr.write("It attacks and does " + str(effect) + " damage\n")
+        rprint("It attacks and does " + str(effect) + " damage\n")
         return(effect)
     else:
         print("It attacks, but misses")
@@ -110,7 +113,7 @@ def attackEnemy():
     if(result <= playerAccuracy):
         effect = random.randrange(max(playerAttack - 20, 4), max(playerAttack, 6))
         result = random.randrange(10)
-        sys.stderr.write("You attack and do " + str(effect) + " damage\n")
+        rprint("You attack and do " + str(effect) + " damage\n")
         return(effect)
     else:
         print("You attack, but miss")
@@ -138,7 +141,7 @@ while cont:
                     input("Press enter to continue... ")
                 else:
                     if len(line[:-1]) > 0 and line[0] == "+":
-                        sys.stderr.write(line[1:])
+                        rprint(line[1:])
                     else:
                         print(line[:-1])
             
@@ -160,15 +163,20 @@ while cont:
             if(f.readline()[:-1] == "True"):
                 attackResult = loadEnemy(fileID)
                 if(attackResult == 0):
-                    sys.stderr.write("You died.\n")
+                    rprint("You died.\n")
                     input("Press enter to continue...\n")
-                    sys.stderr.write("PRESS CANCEL IF IN PYSHELL\n")
+                    rprint("PRESS CANCEL IF IN PYSHELL\n")
                     exit("User died")
                     cont = False
                 if(attackResult == 2):
                     isNextDoor = True
                     nextDoor = lastID
                     lastID = fileID
+                else:
+                    drop = f.readline()[:-1]
+                    if drop != "":
+                        rprint("+ " + drop + "\n")
+                        inventory.append(drop)
             while (not isNextDoor):
                 print("Enter command")
                 command = input(">>> ")
@@ -181,7 +189,7 @@ while cont:
                     print("You have:")
                     print(str(inventory)[1:-1], sep="\n")
                 if eq(firstCmd, "exit") or eq(firstCmd, "quit"): #If first word is exit or quit
-                    sys.stderr.write("PRESS CANCEL IF IN PYSHELL\n")
+                    rprint("PRESS CANCEL IF IN PYSHELL\n")
                     exit("User selected exit game")
                 if eq(firstCmd, "input"): #If the user wants to move
                     if(firstCmdIndex != -1):
@@ -192,9 +200,9 @@ while cont:
                             if(choiceReq[moveChoice] == "" or inventory.count(choiceReq[moveChoice]) > 0):
                                 if(choiceDie[moveChoice] == "True"):
                                     print(choiceSel[moveChoice])
-                                    sys.stderr.write("You died.\n")
+                                    rprint("You died.\n")
                                     input("Press enter to continue...\n")
-                                    sys.stderr.write("PRESS CANCEL IF IN PYSHELL\n")
+                                    rprint("PRESS CANCEL IF IN PYSHELL\n")
                                     exit("User died")
                                     cont = False
                                 else:
@@ -208,19 +216,19 @@ while cont:
                                         print(choiceSel[moveChoice]) #Otherwise just print the text
                             else:
                                 if(choiceReqShown[moveChoice] == "True"):
-                                    sys.stderr.write("You need an item to do this: " + choiceReq[moveChoice] + "\n")
+                                    rprint("You need an item to do this: " + choiceReq[moveChoice] + "\n")
                                 else:
-                                    sys.stderr.write("You can't do that now\n")
+                                    rprint("You can't do that now\n")
                         except ValueError:
-                            sys.stderr.write("The location \"" + secondCmd + "\" doesn't exist!\n")
+                            rprint("The location \"" + secondCmd + "\" doesn't exist!\n")
                     else:
-                        sys.stderr.write("You need to choose somewhere to move to!\n")
+                        rprint("You need to choose somewhere to move to!\n")
                 
             
             fileID = nextDoor
     except ValueError as e:
         print()
-        sys.stderr.write("An error has ocurred.\n")
+        rprint("An error has ocurred.\n")
         print()
         print("Please contact the game maker with the following information.")
         print("Please include a short report with what you did.")
@@ -229,19 +237,19 @@ while cont:
         print("Last ID: " + lastID)
         print()
         print("Error details:")
-        sys.stderr.write(str(e) + "\n")
+        rprint(str(e) + "\n")
         print()
         print("Likely error cause: Initial description line length incorrect")
         input("Press enter to continue\n")
         cont = False
     except Exception as e:
         print()
-        sys.stderr.write("An error has ocurred.\n")
+        rprint("An error has ocurred.\n")
         print()
         print("Please contact the game maker with the place ID.")
         print("Please include a short report with what you did.")
         print("Error details:")
-        sys.stderr.write(str(e) + "\n")
+        rprint(str(e) + "\n")
         input("Press enter to continue\n")
         cont = False
         

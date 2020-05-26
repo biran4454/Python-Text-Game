@@ -16,6 +16,7 @@ Enemy name
 Enemy Attack
 Enemy Health
 Enemy Accuracy
+Enemy drop
 
 
 
