@@ -1,0 +1,70 @@
+15
+You keep walking and walking along the seemingly endless
+network of caves. As you get further inside, it gets colder
+until you have to stop to warm yourself up.
+Eventually, you reach the end of the tunnel: a huge pile
+of rubble reaching up to the top of the cave.
+
+You have come this far already - there's no point turning
+back.
+You think there might be a way around the pile, but you 
+aren't sure. You could also try to climb up to the top
+to see if you could get over it.
+Alternativly, if you had dynamite, you could BLOW UP the
+rocks.
+
++Do you CLIMB, BLOW UP, or find a route AROUND the pile?
+0
+3
+Climb
+1
+5
+
+
+You try to climb the pile of rocks.
+False
+
+Around
+1
+6
+
+
+You look for a way around the rocks.
+False
+
+Blow up
+1
+8
+dynamite
+True
+You plant the dynamite and run back, although the explosion nearly knocks you off your feet.
+False
+
+False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

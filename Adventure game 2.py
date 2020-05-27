@@ -50,7 +50,7 @@ enemyAccuracy = 6
 playerAttack = 10 #Default settings
 playerHealth = 60
 playerAccuracy = 7
-def loadEnemy(fileID): #Returns 0 if player dead, 1 if alive, 2 if running
+def loadEnemy(fileID): #Returns 0 if player dead, 1 if alive, 2 if running away
     try:
         with open(fileID + ".txt") as f:
             for i in range(int(f.readline()[:-1])): #Skip the first lines
@@ -164,7 +164,7 @@ while cont:
             
             for i in range(int(f.readline()[:-1])): #Print story background
                 line = f.readline()
-                if line[:-1] == "+break":
+                if line[:-1] == "!break":
                     input("Press enter to continue... ")
                 else:
                     if len(line[:-1]) > 0 and line[0] == "+":
@@ -256,7 +256,7 @@ while cont:
                                 else:
                                     rprint("You can't do that now\n")
                         except ValueError:
-                            rprint("The location \"" + secondCmd + "\" doesn't exist!\n")
+                            rprint("The command \"" + secondCmd + "\" doesn't exist!\n")
                     else:
                         rprint("You need to choose somewhere to move to!\n")
                 
@@ -264,7 +264,7 @@ while cont:
             fileID = nextDoor
     except ValueError as e:
         print()
-        rprint("An error has ocurred.\n")
+        rprint("An error has occurred.\n")
         print()
         print("Please contact the game maker with the following information.")
         print("Please include a short report with what you did.")
@@ -281,7 +281,7 @@ while cont:
     
     except FileNotFoundError as e:
         print()
-        rprint("An error has ocurred.\n")
+        rprint("An error has occurred.\n")
         print()
         print("Please contact the game maker with the following information.")
         print("Please include a short report with what you did.")
@@ -298,7 +298,7 @@ while cont:
     
     except Exception as e:
         print()
-        rprint("An error has ocurred.\n")
+        rprint("An error has occurred.\n")
         print()
         print("Please contact the game maker with the place ID.")
         print("Please include a short report with what you did.")

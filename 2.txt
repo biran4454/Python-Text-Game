@@ -11,19 +11,19 @@ all huddled together. You stare at them for so long you
 forget to watch where you are going, and nearly trip over
 a large rock.
 
-+break
+!break
 
 Carefully making your way over the uneaven floor, you wonder
 how this cave was formed.
 Was it from an underground river, or was it made by
 something else... or someone else? You keep pondering this 
-until it is too dark to walk futher. Luckily you brought 
+until it is too dark to walk futher. Luckily you brought
 a small flashlight.
 
 Reaching into your rucksack to get it, you can't shake the
 feeling that you're being watched.
 
-+break
+!break
 
 The torch lights up the entire cave - although there
 isn't much to look at, other than rocks and spiders!
