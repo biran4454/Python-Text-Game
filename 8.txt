@@ -1,22 +1,53 @@
+16
+You reach the other side of the rocks!
+You continue walking along the cave system for about 5
+minutes, until you reach a dead end: a huge wall of
+rock.
+
+But wait... There are two openings set into the rock.
+Intrigued, you walk closer.
+They are doors! This proves that someone must have been
+here before you.
+
+You take a closer look at the doors.
+One of them is layered with what seems like gold plating.
+The other is layered with a duller metal - maybe platinum.
+
+Tucked into one of the doors is another scrap of parchment.
++Do you take the GOLD DOOR or the PLATINUM DOOR?
+1
+Parchment scrap
 3
-+You reach the other side of the rocks!
-Yay!
-!break
+Gold door
+1
+9
+
+
+You open the gold door. As you step through, it shuts and locks behind you.
+False
+
+Platinum door
 0
-0
-True
-Beast of infinite power
-99999999
-100
-11
-Infinite power ring
 
 
 
+This door doesn't lead anywhere yet ;)
+False
+
+Back
+1
+4
 
 
+You go back.
+False
 
-
+Is there an enemy? (True / False)
+Enemy name
+Enemy Attack
+Enemy Health
+Enemy Accuracy
+Enemy drop
 
 
 

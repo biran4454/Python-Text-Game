@@ -33,7 +33,7 @@ Something is there, under the rock.
 
 +Do you RUN away or INVESTIGATE?
 0
-3
+4
 Run
 1
 4
@@ -58,6 +58,14 @@ Pick up rocks
 You pick up some rocks off the cave floor.
 False
 rocks
+Back
+1
+00intro
+
+
+You go back.
+False
+
 False
 
 

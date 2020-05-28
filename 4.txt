@@ -15,7 +15,7 @@ rocks.
 
 +Do you CLIMB, BLOW UP, or find a route AROUND the pile?
 0
-3
+4
 Climb
 1
 5
@@ -38,6 +38,14 @@ Blow up
 dynamite
 True
 You plant the dynamite and run back, although the explosion nearly knocks you off your feet.
+False
+
+Back
+1
+2
+
+
+You go back to the large rock.
 False
 
 False

@@ -1,9 +1,10 @@
-48
+49
 +Welcome to the adventure game.
 +Created by Biran4454
 +Use "input" to enter commands.
 +Use "inventory" to see your inventory.
 +Use "quit" or "exit" to exit the game.
++You can type "input back" to go back.
 
 +*****************************************
 You stare at the tall cliff face in front of you,

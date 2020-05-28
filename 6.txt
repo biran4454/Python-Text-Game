@@ -4,7 +4,7 @@ reach a very tight opening.
 You aren't sure whether you can get through.
 +Do you CONTINUE or CLIMB the pile?
 0
-2
+3
 Continue
 1
 8
@@ -19,6 +19,14 @@ Climb
 
 
 You attempt to climb the pile.
+False
+
+Back
+1
+4
+
+
+You go back.
 False
 
 False

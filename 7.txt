@@ -11,13 +11,21 @@ It seems you have no choice but to fight it.
 +Afterwards, you should CRAWL BACK.
 !break
 0
-1
+2
 Crawl back
 1
 5
 
 
 You crawl back through the tunnel.
+False
+
+Back
+1
+5
+
+
+You go back.
 False
 
 True
