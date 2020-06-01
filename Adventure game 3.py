@@ -52,7 +52,7 @@ playerHealth = 60
 playerAccuracy = 7
 def loadEnemy(fileID): #Returns 0 if player dead, 1 if alive, 2 if running away
     try:
-        with open("fixed data files/"fileID + ".txt") as f:
+        with open("fixed data files/" + fileID + ".txt") as f:
             for i in range(int(f.readline()[:-1])): #Skip the first lines
                 f.readline()
             for i in range(int(f.readline())):
