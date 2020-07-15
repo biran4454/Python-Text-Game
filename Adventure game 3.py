@@ -31,7 +31,6 @@ Enemy item drops
 """
 import sys
 import random
-import enemy
 random.seed()
 def is_number(s):
     try:
@@ -51,8 +50,102 @@ enemyAccuracy = 6
 playerAttack = 10 #Default settings
 playerHealth = 60
 playerAccuracy = 7
+def loadEnemy(fileID): #Returns 0 if player dead, 1 if alive, 2 if running away
+    try:
+        with open("fixed data files/" + fileID + ".txt") as f:
+            for i in range(int(f.readline()[:-1])): #Skip the first lines
+                f.readline()
+            for i in range(int(f.readline())):
+                f.readline()
+            for i in range(int(f.readline()) * 8):
+                f.readline()
+            f.readline()
+            enemyName = f.readline()[:-1] #Set enemy stats
+            print("Enemy found: " + enemyName)
+            enemyAttack = int(f.readline())
+            enemyHealth = int(f.readline())
+            enemyAccuracy = int(f.readline())
+            playerAttack = 10
+            playerHealth = 60
+            playerAccuracy = 7
+            while enemyHealth > 0: #Param not really necessary
+                playerHealth -= attackPlayer()
+                if(playerHealth <= 0): #If dead
+                    return(0)
+                enemyHealth -= attackEnemy()
+                if(enemyHealth <= 0):
+                    print("You defeated the " + enemyName + "!")
+                    return(1)
+                print("Your health:  ", end="")
+                if(playerHealth > 20): #TODO: greater than percentage of start health
+                    for i in range(playerHealth):
+                        print("▅", end="") #Print health bar
+                else:
+                    for i in range(playerHealth):
+                        rprint("▅")
+                print()
+                print("Enemy health: ", end="")
+                if(enemyHealth > 20):
+                    for i in range(enemyHealth):
+                        print("▅", end="")
+                else:
+                    for i in range(enemyHealth):
+                        rprint("▅")
+                print()
+                attackCmd = input("Command? (Escape, Medi, Use, [enter])\n>>> ").lower()
+                try:
+                    firstCmdIndex = attackCmd.index(' ') #Get first word
+                except ValueError:
+                    firstCmdIndex = len(attackCmd)
+                firstCmd = attackCmd[:firstCmdIndex].lower()
+                
+                if(firstCmd == "escape"):
+                    return(2)
+                if(firstCmd == "medi"): #Health pack
+                    if(inventory.count("medipack") > 0 or inventory.count("Medipack") > 0):
+                        playerHealth += 20
+                        playerHealth = min(playerHealth, 60)
+                if(firstCmd == "use"): #Extra attack
+                    if(firstCmdIndex != -1):
+                        secondCmdIndex = len(attackCmd)
+                        secondCmd = attackCmd[firstCmdIndex + 1:secondCmdIndex].lower()
+                        if(eq(secondCmd, "rocks")):
+                            if(inventory.count("rocks") > 0):
+                                attackEnemy()
+                            else:
+                                rprint("You don't have " + secondCmd + ". \n")
+                        else:
+                            rprint("You can't use " + secondCmd + ". \n")
+                    else:
+                        rprint("Nothing selected to use. Continuing.\n")
+            
+    except OSError:
+        rprint("File does not exist. Please contact the program maker.\n")
+        return(1)
 
-fileID = input("Enter a place ID to start")
+def attackPlayer():
+    result = random.randrange(10) #Used for hit / miss calc
+    if(result <= enemyAccuracy):
+        effect = random.randrange(max(enemyAttack - 20, 4), max(enemyAttack, 6)) #No negative damage!
+        result = random.randrange(10)
+        rprint("It attacks and does " + str(effect) + " damage\n")
+        return(effect)
+    else:
+        print("It attacks, but misses")
+        return(0)
+
+def attackEnemy():
+    result = random.randrange(10)
+    if(result <= playerAccuracy):
+        effect = random.randrange(max(playerAttack - 20, 4), max(playerAttack, 6))
+        result = random.randrange(10)
+        rprint("You attack and do " + str(effect) + " damage\n")
+        return(effect)
+    else:
+        print("You attack, but miss")
+        return(0)
+    
+fileID = "00intro"
 inventory = []
 cont = True
 lastID = "00intro"
@@ -96,7 +189,7 @@ while cont:
             isNextDoor = False
             nextDoor = -1
             if(f.readline()[:-1] == "True"): #If there's an enemy
-                attackResult = enemy.loadEnemy(fileID) #Run attack sequence
+                attackResult = loadEnemy(fileID) #Run attack sequence
                 if(attackResult == 0): #And process the result
                     rprint("You died.\n")
                     input("Press enter to continue...\n")
