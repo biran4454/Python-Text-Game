@@ -1,0 +1,74 @@
+Number of text lines
+Stepping through the platinum door you find yourself in a small,
+cold room. It seems very geometric and angular, but oddly quite
+un-symmetrical. Obviously this room couldn't have been created
+by nature, so whatever built those doors must have built this
+room too.
+The room has a sort of damp smell, as though it's been empty
+for years without anyone entering.
+
+You bend down to touch the floor. It is ice cold and smooth.
+Pressing your ear to it you are sure you can hear something
+rumbling. What could that be?
+Standing up again you slip and your foot knocks into something
+solid and metallic.
+
+!break
+
+An old rusty chest, locked with a large padlock. It feels like
+it's been here for hundreds of years, although you suspect it
+hasn't been that long. The padlock is so rusted that a small
+tug splits it open. Holding your breath, you lift the lid of
+the box.
+
+Inside the box is a skeleton holding a dagger and sword, with
+gold coins at his head and a shield at his feet. There is also
+a bright blue diamond with the word "peace" engraved into it,
+and a piece of aged parchment.
+
++Do you READ THE MANUSCRIPT or TAKE AN ITEM? //take an item leads to another id where the player selects an item to take then returns here.
+
+Number of inventory items
+Inventory items
+Number of choices
+Choice name #1
+Is choice a door (1) or block (0) #1
+Choice ID #1
+Choice inventory requirement #1
+Is choice inventory requirement shown? (True / False) #1
+Choice select text #1
+Does choice kill you? (True / False) #1
+Door item drop #1
+Is there an enemy? (True / False)
+Enemy name
+Enemy Attack
+Enemy Health
+Enemy Accuracy
+Enemy drop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

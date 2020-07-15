@@ -42,7 +42,7 @@ Back
 You go back.
 False
 
-Is there an enemy? (True / False)
+False
 Enemy name
 Enemy Attack
 Enemy Health

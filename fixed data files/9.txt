@@ -1,47 +1,68 @@
-Number of text lines
-Text line #1
-Text line #2 etc.
-Number of inventory items
-Inventory items
-Number of choices
-Choice name #1
-Is choice a door (1) or block (0) #1
-Choice ID #1
-Choice inventory requirement #1
-Is choice inventory requirement shown? (True / False) #1
-Choice select text #1
-Does choice kill you? (True / False) #1
-Door item drop #1
-Is there an enemy? (True / False)
-Enemy name
-Enemy Attack
-Enemy Health
-Enemy Accuracy
-Enemy drop
+43
+Sweat trickles down your face as you hear the metallic clunk of the
+gold door shutting.
+The dim corridor is plunged into sudden darkness, and a musty smell
+of damp rock begins to penetrate through the atmosphere.
+Squinting through the sudden darkness you notice a tiny light at
+the back of the chamber. You step closer.
+
+!break
+ 
+The light flickers enticingly at you, drawing you closer like a
+moth to a lamp on a cold winter night. 
+
+You notice that feeling again that someone is watching you.
+Suddenly you see something move.
+At least you thought you saw something.
+
+There it is again. Something huge and powerful. No mistaking it.
+
+You try to calm yourself down and think things through.
+How could anything be living here, in this cave?
+It's just your imagination, and in this darkness, where you have
+only yourself, you mustn't make an enemy of your imagination.
+
+!break
+
+But you remember the doors - how could those get there? Something
+must have got in. Maybe it's still here...
+Wariness creeps through your body again.
+Wariness turns into nervousness.
+Nervousness turns into anxiety.
+
+Your heart pounds faster. Blood pulses strongly through you. Your
+eyes dart around.
+
+A noise. A grunt. A screech. A screem.
+
+Suddenly a massive beast jumps out at you, fangs ready, claws out.
+You have no choice but to fight, but how to win a battle against such
+a powerful beast?
+
++If you win you must RUN TOWARDS THE LIGHT
+!break
+
+0
+2
+Run towards the light
+1
+11
+Ragged Shield
+False
+You run away from the Mountain Giant
+False
+
+Back
+1
+8
 
 
+You run away
+False
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+True
+Mountain Giant
+8
+80
+8
+Ragged Shield

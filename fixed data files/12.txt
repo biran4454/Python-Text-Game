@@ -1,0 +1,127 @@
+64
+Your hand nears it. Part of you still feels unsure about it but
+you dismiss it; you have to find out what this strange
+lantern is...
+
+You touch it. Instantly the whispering intensifies, as though
+it is inside your head. Strange languages and long forgotten
+chants; thoughts and feelings from ancient civilisations.
+
+!break
+
+The voices echo around your head, resounding and reflecting
+in your mind. The noise grows louder. The voices chant faster
+and faster and faster. The light grows stronger and brighter.
+Your body and mind are being controlled, shaken, destroyed.
+Blindly you stumble around and around, drowning in a fever of
+sound and light and pain. You are falling, falling, falling,
+into a sea of infinite dazzling light and blinding sound.
+
+Your eyes open.
+You are in a white room with curved walls and a gentle sunlight
+seeping in through the perfectly woven snow white curtains.
+Soft silk blankets surround you and envelop you, and a wool
+mattress is cradling you. You pull back the blankets and sit up.
+A spike of pain rips up your back as you stand up, so you
+quickly sit back onto the bed. The pain eases.
+
+!break
+
+Laying on the floor is a white carpet with red spots dotted
+around on it. It is thick and soft, and your feet sink into it.
+Next to the bed is a small oak table with a hand made drawer.
+On it is a glass oil lamp - un-lit of course; there is plenty
+of light streaming in through the glazed windows. Next to it
+is a pen and some paper. You decide to take these as they
+might be useful later. Although when you go to put them in
+your rucksack you realise that you don't have it, so you put
+it in your pocket instead.
+
+++Pen
+++Paper
+
+!break
+
+Your ears start to accustom to the silence and you start to hear
+the faint sound of birds outside your window.
+You realise you can hear classical music wafting through the walls
+into the room.
+The murmers of friendly voices chatting also enters you ears.
+Kind, loving voices, not like the horrors of the cave...
+Suddenly all of the trauma of the voices and the dazzling
+lantern floods back into your mind. What happened? How did you
+get here?
+
+!break
+
+Your thoughts are (thankfully) interrupted by the door creaking
+open. A maid shuffles in. She is elderly and thin, with grey 
+wirey hair and hands hardened by a life of working and cleaning.
+She mutters something and wipes her hands before noticing you.
+"Ah, I was a'wondering when you would wake," she croaked,
+"Breakfast is downstairs as usual."
+She pauses, then smiles gently, "Yes, it's your favourite. I made
+sure to get some eggs from ol' Mr. Greyham's farm jus' for you."
+You are stunned, and before you can say anything she turns and 
+shuffles out of the room, mumbling to herself.
+
+You pause a while to think. Realising that you have to do something,
+you try to get up again. This time you manage it without pain.
+She said something about breakfast, and you realise you are starving,
+but maybe you should explore the house first.
+
++Do you GO DOWNSTAIRS or EXPLORE?
+
+2
+Pen
+Paper
+2
+GO DOWNSTAIRS
+1
+Choice ID #1
+
+
+You start to head downstairs
+False
+
+EXPLORE
+1
+Choice ID #2
+
+
+You start to explore
+False
+
+False
+Enemy name
+Enemy Attack
+Enemy Health
+Enemy Accuracy
+Enemy drop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
