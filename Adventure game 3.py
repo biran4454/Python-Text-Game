@@ -31,6 +31,7 @@ Enemy item drops
 """
 import sys
 import random
+import enemy
 random.seed()
 def is_number(s):
     try:
@@ -134,18 +135,7 @@ def attackPlayer():
         print("It attacks, but misses")
         return(0)
 
-def attackEnemy():
-    result = random.randrange(10)
-    if(result <= playerAccuracy):
-        effect = random.randrange(max(playerAttack - 20, 4), max(playerAttack, 6))
-        result = random.randrange(10)
-        rprint("You attack and do " + str(effect) + " damage\n")
-        return(effect)
-    else:
-        print("You attack, but miss")
-        return(0)
-    
-fileID = "00intro"
+fileID = input("Enter a place ID to start")
 inventory = []
 cont = True
 lastID = "00intro"
@@ -189,7 +179,7 @@ while cont:
             isNextDoor = False
             nextDoor = -1
             if(f.readline()[:-1] == "True"): #If there's an enemy
-                attackResult = loadEnemy(fileID) #Run attack sequence
+                attackResult = enemy.loadEnemy(fileID) #Run attack sequence
                 if(attackResult == 0): #And process the result
                     rprint("You died.\n")
                     input("Press enter to continue...\n")
