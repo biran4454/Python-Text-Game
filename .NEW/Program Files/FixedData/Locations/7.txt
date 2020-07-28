@@ -1,0 +1,63 @@
+11
+You come out of the hole into a huge chamber.
+The walls are glistening, but in patches they are burnt.
+You see something in the corner of your eye.
+Something moved.
+You dismiss it as paranoia, but it moves again.
+Walking closer, you see it is a huge dragon!
+You jump backwards. It stirs...
+It's eye opens. Staring coldly at you, it gets up slowly.
+It seems you have no choice but to fight it.
++Afterwards, you should CRAWL BACK.
+!break
+0
+2
+Crawl back
+1
+5
+
+
+You crawl back through the tunnel.
+False
+
+Back
+1
+5
+
+
+You go back.
+False
+
+True
+Dragon
+20
+40
+5
+Fire ring
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

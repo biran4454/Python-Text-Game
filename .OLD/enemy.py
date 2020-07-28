@@ -1,64 +1,29 @@
 import sys
 import random
-import enemy
+import playerSet
 enemyName = ""
 enemyAttack = 20
 enemyHealth = 50
 enemyAccuracy = 6
-playerAttack = 10 #Default settings
-playerHealth = 60
+playerAttack = playerSet.getPlayerAttack()
+playerHealth = playerSet.getPlayerHealth()
 playerAccuracy = 7
 def eq(cmd, s):
-    return(cmd.lower() == s.lower())
+    return cmd.lower() == s.lower()
 def rprint(text): #Print through stderr. Pros: makes red text! Yay!
     sys.stderr.write(text)
 def checkEnemyHealth(locationID):
     try:
-        with open("variable data files/LocationEnemyHealth.txt") as f:
-            for line in f:
-                line = line[:-1]
-                try:
-                    locPos = line.index(':')
-                except ValueError:
-                    print("Non-fatal error: LocationEnemyHealth contains unrecognised line:\n" + line)
-                    continue
-                loc = line[:locPos]
-                if(loc == locationID):
-                    hpos = len(line)
-                    health = line[locPos + 1:hpos]
-                    return health
+        with open("variable data files/EnemyHealth/%s.txt" % str(locationID), "r") as f:
+            return int(f.readline())
     except OSError:
-        rprint("ERROR: VARIABLE DATA FILE DOES NOT EXIST - PLEASE CONTACT GAME MAKER")
-    finally:
         return -1
-def setEnemyHealth(locationID, new, value): ########## FINISH THIS! ##########
-    value = str(value)
-    if(len(value) == 1):
-        value = "0" + value
-    if(len(value) == 2):
-        value = "0" + value
+def setEnemyHealth(locationID, value):
     try:
-        if(new):
-            with open("variable data files/LocationEnemyHealth.txt", 'r+') as f:
-                f.read(-1)
-                f.write(locationID + ":" + value + "\n")
-        else:
-            with open("variable data files/LocationEnemyHealth.txt", 'r+') as f:
-                for line in iter(f.readline, ''):
-                    line = line[:-1]
-                    try:
-                        locPos = line.index(':')
-                    except ValueError:
-                        print("Non-fatal error: LocationEnemyHealth contains unrecognised line:\n" + line)
-                        continue
-                    loc = line[:locPos]
-                    if(loc == locationID):
-                        f.seek(f.tell() - 5)
-                        f.write(str(value))
-                        return
+        with open("variable data files/EnemyHealth/%s.txt" % str(locationID), "w") as f:
+            f.write(str(value))
     except OSError:
-        rqprint("ERROR: VARIABLE DATA FILE DOES NOT EXIST - PLEASE CONTACT GAME MAKER\n")
-
+        rprint("THIS ERROR SHOULD NOT BE PRINTED. IF IT IS THEN PLEASE CONTACT THE GAME MAKER\n")
 
 def attackPlayer():
     result = random.randrange(10) #Used for hit / miss calc
@@ -66,10 +31,10 @@ def attackPlayer():
         effect = random.randrange(max(enemyAttack - 20, 4), max(enemyAttack, 6)) #No negative damage!
         result = random.randrange(10)
         rprint("It attacks and does " + str(effect) + " damage\n")
-        return(effect)
+        return effect
     else:
         print("It attacks, but misses")
-        return(0)
+        return 0
 
 def attackEnemy():
     result = random.randrange(10)
@@ -77,10 +42,10 @@ def attackEnemy():
         effect = random.randrange(max(playerAttack - 20, 4), max(playerAttack, 6))
         result = random.randrange(10)
         rprint("You attack and do " + str(effect) + " damage\n")
-        return(effect)
+        return effect
     else:
         print("You attack, but miss")
-        return(0)
+        return 0
 
 def loadEnemy(fileID): #Returns 0 if player dead, 1 if alive, 2 if running away
     try:
@@ -102,17 +67,18 @@ def loadEnemy(fileID): #Returns 0 if player dead, 1 if alive, 2 if running away
             else:
                 enemyHealth = int(f.readline())
             enemyAccuracy = int(f.readline())
-            playerAttack = 10
-            playerHealth = 60
+            playerAttack = playerSet.getPlayerAttack()
+            playerHealth = playerSet.getPlayerHealth()
             playerAccuracy = 7
-            while enemyHealth > 0: #Param not really necessary
+            while True:
                 playerHealth -= attackPlayer()
                 if(playerHealth <= 0): #If dead
-                    return(0)
+                    return 0
                 enemyHealth -= attackEnemy()
                 if(enemyHealth <= 0):
                     print("You defeated the " + enemyName + "!")
-                    return(1)
+                    setEnemyHealth(fileID, enemyHealth)
+                    return 1
                 print("Your health:  ", end="")
                 if(playerHealth > 20): #TODO: greater than percentage of start health
                     for i in range(playerHealth):
@@ -137,8 +103,9 @@ def loadEnemy(fileID): #Returns 0 if player dead, 1 if alive, 2 if running away
                 firstCmd = attackCmd[:firstCmdIndex].lower()
                 
                 if(firstCmd == "escape"):
-                    
-                    return(2)
+                    playerSet.setPlayerHealth(playerHealth)
+                    setEnemyHealth(fileID, enemyHealth)
+                    return 2
                 if(firstCmd == "medi"): #Health pack
                     if(inventory.count("medipack") > 0 or inventory.count("Medipack") > 0):
                         playerHealth += 20
@@ -159,4 +126,4 @@ def loadEnemy(fileID): #Returns 0 if player dead, 1 if alive, 2 if running away
             
     except OSError:
         rprint("File does not exist. Please contact the program maker.\n")
-        return(1)
+        return 1

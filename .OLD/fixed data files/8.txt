@@ -23,15 +23,15 @@ Gold door
 9
 
 
-You open the gold door. As you step through, it shuts and locks behind you.
+You open the gold door.
 False
 
 Platinum door
-0
+1
+10
 
 
-
-This door doesn't lead anywhere yet ;)
+You open the platinum door. 
 False
 
 Back

@@ -1,0 +1,59 @@
+4
+You find a way around the pile, but you get halfway and
+reach a very tight opening.
+You aren't sure whether you can get through.
++Do you CONTINUE or CLIMB the pile?
+0
+3
+Continue
+1
+8
+
+
+You crawl through the small opening. You don't think you will make it, but you eventually crawl out of the other side.
+False
+
+Climb
+1
+5
+
+
+You attempt to climb the pile.
+False
+
+Back
+1
+4
+
+
+You go back.
+False
+
+False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

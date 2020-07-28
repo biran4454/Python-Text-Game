@@ -1,0 +1,68 @@
+16
+You reach the other side of the rocks!
+You continue walking along the cave system for about 5
+minutes, until you reach a dead end: a huge wall of
+rock.
+
+But wait... There are two openings set into the rock.
+Intrigued, you walk closer.
+They are doors! This proves that someone must have been
+here before you.
+
+You take a closer look at the doors.
+One of them is layered with what seems like gold plating.
+The other is layered with a duller metal - maybe platinum.
+
+Tucked into one of the doors is another scrap of parchment.
++Do you take the GOLD DOOR or the PLATINUM DOOR?
+1
+Parchment scrap
+3
+Gold door
+1
+9
+
+
+You open the gold door.
+False
+
+Platinum door
+1
+10
+
+
+You open the platinum door. 
+False
+
+Back
+1
+4
+
+
+You go back.
+False
+
+False
+Enemy name
+Enemy Attack
+Enemy Health
+Enemy Accuracy
+Enemy drop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

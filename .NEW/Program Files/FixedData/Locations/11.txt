@@ -1,0 +1,88 @@
+35
+You’ve reached the light!
+
+With the Mountain Giant defeated a great wave of relief spreads
+through you and you realise you are exhausted.
+You knew this trip would be difficult, and you can't turn back
+now, but you still question if you should have spent more time
+training for this.
+The path is gravelly and sandy now, with a few rocks lit up by
+the growing light.
+
+As you walk towards the source of the light your feet crunch on
+something hard. A small glint in the sand guides you towards
+a tiny ruby laying innocently on the ground. You pick it up.
+
+++Ruby
+
+You turn your attention to the light.
+Gazing more closely at it you realise it’s a lantern...
+But... Why is it whispering? 
+You wonder if you are imagining it - you are very tired after
+all.
+
+!break
+
+The light continues whispering and wavering for a few minutes, with
+you completely in it's grasp.
+Anxiousness is crawling up your spine, with excitement climbing after.
+Could this be it? Could this be what you have come all this way
+to find?
+
+You feel the urge to grab it to touch it, but something deep in
+the back of your mind tells you not to...
+
++Do you TOUCH IT or EXAMINE THE CAVE?
+
+1
+Ruby
+2
+TOUCH IT
+1
+12
+
+
+You reach towards the light.
+False
+
+EXAMINE THE CAVE
+1
+13
+
+
+You look around the chamber.
+False
+
+False
+Enemy name
+Enemy Attack
+Enemy Health
+Enemy Accuracy
+Enemy drop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

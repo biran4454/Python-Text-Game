@@ -1,0 +1,32 @@
+Text Adventure Game created by Biran4454
+Code: Biran4454
+Story: Biran4454 & Mixoflixo14
+
+TODO:
+Sort out unicode copying from different fonts
+Add better pace-reducing sentences in ID 12
+Check all story locations for past tense and change to present tense.
+Add Needs restart? value which is set on death and install
+
+FILE STRUCTURE:
+
+Number of text lines
+Text line #1
+Text line #2 etc.
+Number of inventory items
+Inventory items
+Number of choices
+Choice name #1
+Is choice a door (1) or block (0) #1
+Choice ID #1
+Choice inventory requirement #1
+Is choice inventory requirement shown? (True / False) #1
+Choice select text #1
+Does choice kill you? (True / False) #1
+Door item drop #1
+Is there an enemy? (True / False)
+Enemy name
+Enemy Attack
+Enemy Health
+Enemy Accuracy
+Enemy drop

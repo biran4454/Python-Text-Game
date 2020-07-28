@@ -1,0 +1,3 @@
+Sort out unicode copying from different fonts
+Add better pace-reducing sentences in ID 12
+Check all story locations for past tense and change to present tense.

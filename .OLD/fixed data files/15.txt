@@ -1,0 +1,97 @@
+45
+Wearily you stand up, clutching at the bedpost to make sure you
+don't fall over in the cloud of lights that dance in your eyes.
+As they fade you start towards the door. A faint breeze, is wafting
+through the door, carrying in the delicious smell of food! 
+The smell draws you towards the door, but as you walk towards it you
+almost stand on a small glass bottle. It is only an inch long and
+contains a wierd blue liquid. The liquid is almost glowing, although
+that could just be the wobbly hand made glass. On the side of it are
+strange symbols.
+
+!break
+
+You reach down to grasp at it, however before you can even touch it a
+hand clasps at your shoulder, roughly pulling you up. Agony shoots
+down your spine and you wince in pain.
+"What you doin' crashing 'round like that?" a slurred male voice growls
+in your ear. Your head is being pressed down and you collapse onto
+the floor. You try to crawl out of the crushing, claw like grasp,
+but with no success. Your face is half buried in the carpet, meaning
+you can't see much except his grimy feet. But then you hear footsteps
+and a young woman enters the room.
+
+Apologetically she tugged the hand away from him and helped you to the floor.
+"Mr. Smith that's no way to treat visitors." she scolded.
+Looking around you see that the hand was actually a middle aged man,
+who appeared to be drunk. His eyes roll as he looks at you and his
+tongue hanged slimly out of his mouth. 
+
+!break
+
+"I am so sorry about that." the young woman apologized, ushering 
+the Drunk Man out,
+"He has a terrible habit of getting absurdly sloshed on the full 
+moon after the celebratory dances are done."
+You want to ask her what the 'Celebratory Dance' was but she walked
+out calling "Breakfast is ready, I guess The Old Bird has already told you,
+but if you don't hurry up you'll miss the food!" and with a laugh her
+footsteps fade away.
+
+!break
+
+You're about to follow when you remember the glass bottle. Should you take it?
+Food was tempting, but that lantern looked hauntingly familiar.
+
++Do you FOLLOW THE WOMAN or PICK UP THE BOTTLE?
+0
+2
+FOLLOW THE WOMAN
+1
+17
+
+
+You follow the young woman and drunk man out of the room.
+False
+
+PICK UP THE BOTTLE
+0
+
+
+
+You pick up the bottle.
+False
+Bottle
+False
+Enemy name
+Enemy Attack
+Enemy Health
+Enemy Accuracy
+Enemy drop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

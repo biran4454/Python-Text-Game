@@ -1,0 +1,67 @@
+11
+You are at the top of the pile of rocks.
+You have to lie down, but you can see the other side
+of the rock pile! All you need to do now is to climb
+down again.
+You spot a small hole to your left, although in
+order to open it you would need a shovel.
+While looking at the hole, you also spot a small
+piece of parchment lying next to it. How did that
+get there, you wonder. Was someone here before you?
+
++Do you CLIMB DOWN or CRAWL THROUGH THE HOLE?
+1
+Parchment scrap
+3
+Climb down
+1
+8
+
+
+You carefully make your way down to the other side.
+False
+
+Crawl through the hole
+1
+7
+Shovel
+True
+You dig away at the hole, and crawl through.
+False
+
+Back
+1
+4
+
+
+You go back.
+False
+
+False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

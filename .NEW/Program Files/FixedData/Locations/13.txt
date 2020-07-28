@@ -1,0 +1,69 @@
+17
+Veering away from the Whispering Lantern you investigate the surrounding chamber. 
+You spot a parchment hanging onto a point in the chamber.
+Someone must have been here! But who?
+Was it the person who built all this?
+
+A soft dripping noise echos through the chamber. You wander towards the origin
+of the sound, gazing around the cave as you do. The walls are damp and
+yellow-orange in colour.
+You arrive at a pool fed by a small trickle of water pouring out of a small crack
+in the wall. It must be coming from within the mountain itself.
+
+Suddenly a thing leaps out of the water! It has long grey hair and is only as
+tall as your waist.
+It looks at you and croaks, "I am the Water Nymph of the Lantern."
+"What brings you here?”
+
++do you TELL IT YOUR PLANS or COMMAND IT TO HELP YOU?
+0
+2
+TELL IT YOUR PLANS
+1
+Choice ID #1
+
+
+You tell it how you got here
+False
+
+COMMAND IT TO HELP YOU
+0
+
+
+
+"Help me, or I will destroy you," you shout. The water nymph drags you under the water and kills YOU silently instead. Tasty.
+True
+
+False
+Enemy name
+Enemy Attack
+Enemy Health
+Enemy Accuracy
+Enemy drop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
