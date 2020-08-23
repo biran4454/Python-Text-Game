@@ -3,7 +3,7 @@ Under the rock you can see a pair of eyes staring
 back at you.
 Suddenly, a snake jumps out at you!
 +If you win, you must RUN away.
-+break
+!break
 0
 2
 Run

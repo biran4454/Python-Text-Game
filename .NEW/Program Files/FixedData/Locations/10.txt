@@ -6,6 +6,8 @@ by nature, so whatever built those doors must have built this
 room too.
 The room has a sort of damp smell, as though it's been empty
 for years without anyone entering.
+On the opposite side is a pile of rubble, and in a corner is a
+trapdoor.
 
 You bend down to touch the floor. It is ice cold and smooth.
 Pressing your ear to it you are sure you can hear something
@@ -26,20 +28,44 @@ gold coins at his head and a shield at his feet. There is also
 a bright blue diamond with the word "peace" engraved into it,
 and a piece of aged parchment.
 
-+Do you READ THE MANUSCRIPT or TAKE AN ITEM? //take an item leads to another id where the player selects an item to take then returns here.
++Do you READ THE MANUSCRIPT, TAKE AN ITEM,
++INVESTIGATE THE RUBBLE, or GO TO THE TRAPDOOR?
 
-Number of inventory items
-Inventory items
-Number of choices
-Choice name #1
-Is choice a door (1) or block (0) #1
-Choice ID #1
-Choice inventory requirement #1
-Is choice inventory requirement shown? (True / False) #1
-Choice select text #1
-Does choice kill you? (True / False) #1
-Door item drop #1
-Is there an enemy? (True / False)
+0
+2
+READ THE MANUSCRIPT
+0
+
+
+
+You can't make much of the manuscript, but it seems to be a will. At the bottom is a diamond shape.
+False
+Aged Manuscript
+TAKE AN ITEM
+1
+18
+
+
+You reach for an item.
+False
+
+INVESTIGATE THE RUBBLE
+0
+
+
+
+Not finished yet
+False
+
+GO TO THE TRAPDOOR
+1
+19
+
+
+You walk over to the trapdoor
+False
+
+False
 Enemy name
 Enemy Attack
 Enemy Health

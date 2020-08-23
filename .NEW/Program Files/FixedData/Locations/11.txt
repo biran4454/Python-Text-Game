@@ -13,7 +13,7 @@ As you walk towards the source of the light your feet crunch on
 something hard. A small glint in the sand guides you towards
 a tiny ruby laying innocently on the ground. You pick it up.
 
-++Ruby
+-+Ruby
 
 You turn your attention to the light.
 Gazing more closely at it you realise it’s a lantern...

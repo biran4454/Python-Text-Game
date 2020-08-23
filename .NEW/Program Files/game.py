@@ -13,7 +13,8 @@ def eq(cmd, s):
     return cmd.lower() == s.lower()
 def rprint(text): #Print through stderr. Pros: makes red text! Yay!
     sys.stderr.write(text)
-
+def gprint(text):
+    sys.stdout.shell.write(text, "STRING") #Print through shell
 
 fileID = input("Enter starting point\n>>> ")
 inventory = []
@@ -45,7 +46,10 @@ while cont:
                     if len(line[:-1]) > 0 and line[0] == "+":
                         rprint(line[1:])
                     else:
-                        print(line[:-1])
+                        if len(line[:-1]) > 0 and line[0] == "-":
+                            gprint(line[1:])
+                        else:
+                            print(line[:-1])
             #ADD TO INVENTORY
             for i in range(int(f.readline())):
                 inventory.append(f.readline()[:-1])
@@ -120,14 +124,14 @@ while cont:
                                         isNextDoor = True
                                         print(choiceSel[moveChoice])
                                         if(choiceInvAdd[moveChoice] != ""):
-                                            rprint("+ " + choiceInvAdd[moveChoice] + "\n")
+                                            gprint("+ " + choiceInvAdd[moveChoice] + "\n")
                                             inventory.append(choiceInvAdd[moveChoice])
                                         input("Press enter to continue...\n")
                                         lastID = fileID
                                     else:
                                         print(choiceSel[moveChoice]) #Otherwise just print the text
                                         if(choiceInvAdd[moveChoice] != ""):
-                                            rprint("+ " + choiceInvAdd[moveChoice] + "\n")
+                                            gprint("+ " + choiceInvAdd[moveChoice] + "\n")
                                             inventory.append(choiceInvAdd[moveChoice])
                             else:
                                 if(choiceReqShown[moveChoice] == "True"):

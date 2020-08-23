@@ -1,0 +1,74 @@
+Number of text lines
+You take a closer look at the trapdoor.
+It is made of thick wood, and is about a meter across.
+There is a silver handle on the left, and the outside
+is engraved with a slight silver plating. Beside it is
+a large wooden key. It is too big to fit in the lock
+however, but the lock is already open.
+-+ Wooden Key
+
+  .  .      ##########################      .      .
+.   	 .  #\||||||||||||||||||||||/#       ,       .
+ . !  .     #|  @~-, @~-. @~-, @~-, |#   .         . |    
+ .  .       #|  @~-. @~-. @~-. @~-, |#           .        
+  .       . #|.  ,  .@~-. @~-. @~-, |#       .            
+ .     .    #|   #}  @~-. @~-. @~-. |#   ________oooo,      
+     .      #|  #^#) @~-. @~-. @~-. |#   *!\!|!|/\===o   .  
+|           #|  ###} @~-. @~-. @~-. |#            ooo* .    
+ ,      .   #|.     .@~-. @~-. @~-. |#   .         .  |  
+     .      #|  @~-. @~-. @~-. @~-, |#       !            
+ .    .     #|  @~-. @~-. @~-. @~-, |#            ,  .    
+ .        . #|  @~-, @~-. @~-, @~-, |#                 .
+ .|         #/||||||||||||||||||||||\#        .   .     .
+     .   .  ##########################		     .    .
+
+You stroke your hand across it, and you are sure
+that you can feel a much stronger rumbling, vibrating
+through the floor. Something is inside here. It seems
+to be purring softly.
+
+
+1
+Wooden Key
+Number of choices
+Choice name #1
+Is choice a door (1) or block (0) #1
+Choice ID #1
+Choice inventory requirement #1
+Is choice inventory requirement shown? (True / False) #1
+Choice select text #1
+Does choice kill you? (True / False) #1
+Door item drop #1
+Is there an enemy? (True / False)
+Enemy name
+Enemy Attack
+Enemy Health
+Enemy Accuracy
+Enemy drop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

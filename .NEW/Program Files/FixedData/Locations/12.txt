@@ -37,8 +37,8 @@ might be useful later. Although when you go to put them in
 your rucksack you realise that you don't have it, so you put
 it in your pocket instead.
 
-++Pen
-++Paper
+-+Pen
+-+Paper
 
 !break
 

@@ -1,0 +1,52 @@
+12
+
++Inside the box is a skeleton holding a dagger and sword, with
++gold coins at his head and a shield at his feet. There is also
++a bright blue diamond with the word "peace" engraved into it,
++and a piece of aged parchment.
+
+What do you want to take?
++DAGGAR
+-SWORD
++GOLD COINS
+-DIAMOND
+0
+5
+DAGGAR
+1
+10
+
+
+You take it.
+False
+Daggar
+SWORD
+1
+10
+
+
+You take it.
+False
+Sword
+GOLD COINS
+1
+10
+
+
+You take them.
+False
+Gold Coins
+DIAMOND
+1
+10
+
+
+You take it.
+False
+Diamond with PEACE inscription
+False
+Enemy name
+Enemy Attack
+Enemy Health
+Enemy Accuracy
+Enemy drop
