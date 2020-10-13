@@ -1,0 +1,55 @@
+Number of text lines
+Down a flight of winding stairs you hear the clatter of cheerful voices.
+These must have been the voices you’d heard early, they sound happy
+and welcoming. You reach the last step and look up. A kitchen, small
+but homely, spreads out before you. A medium size table stands in the
+middle of the room laden with: bread and butter, fruits, milk freshly
+milked, honey, jam, cakes, sandwiches; and in the middle a bundle of
+flowers. Four children sit on benches either side of the table, a grubby
+looking boy, two identical girls and a toddler with baby hair. They all
+squeal in delight when they see you.
+
+Number of inventory items
+Inventory items
+Number of choices
+Choice name #1
+Is choice a door (1) or block (0) #1
+Choice ID #1
+Choice inventory requirement #1
+Is choice inventory requirement shown? (True / False) #1
+Choice select text #1
+Does choice kill you? (True / False) #1
+Door item drop #1
+Is there an enemy? (True / False)
+Enemy name
+Enemy Attack
+Enemy Health
+Enemy Accuracy
+Enemy drop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,7 +6,10 @@ TODO:
 Sort out unicode copying from different fonts
 Add better pace-reducing sentences in ID 12
 Check all story locations for past tense and change to present tense.
-Add Needs restart? value which is set on death and install
+Add "Needs restart?" value which is set on death and install
+Figure out why the snake in ID3 seems to die even without any damage dealt.
+Make a program that allows the user to write the story without having to change the actual text file
+WORK OUT WHERE THE HELL I WAS WITH THE FUCKING FILE SAVING!!!!!
 
 FILE STRUCTURE:
 

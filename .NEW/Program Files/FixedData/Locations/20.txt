@@ -1,21 +1,11 @@
 Number of text lines
 You tag along after the woman, hearing the floorboards creak
 beneath your feet. Nerves creep into the back of your mind but you
-batter them down. This woman seemed nice, the maid had seemed nice;
-a bit scatter-brained but nice, and as long as you stayed away from
-the drunkard you should be fine, you reassure yourself.
+batter them down. This woman seems nice, and as long as you
+stay away from the drunkard you should be fine, you reassure yourself.
 
 !break
 
-Down a flight of winding stairs you hear the clatter of cheerful voices.
-These must have been the voices you’d heard early, they sound happy
-and welcoming. You reach the last step and look up. A kitchen, small
-but homely, spreads out before you. A medium size table stands in the
-middle of the room laden with: bread and butter, fruits, milk freshly
-milked, honey, jam, cakes, sandwiches; and in the middle a bundle of
-flowers. Four children sit on benches either side of the table, a grubby
-looking boy, two identical girls and a toddler with baby hair. They all
-squeal in delight when they see you.
 
 !break
 
