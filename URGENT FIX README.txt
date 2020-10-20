@@ -1,0 +1,1 @@
+Possible fix to boss damage problems: readline() always removes \n character with [:-1] split, however due to the lack of \n character at eof, it removes the last character.
