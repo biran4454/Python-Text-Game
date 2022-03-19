@@ -1,8 +1,6 @@
 # Python Text Game
  A text adventure game made in python.
  
- Visit my website: https://biran4454.bubbleapps.io
- 
  Each location is a file named `locationID.txt`.
  Use `input` to enter a command.
  Use `inventory` to see inventory.
